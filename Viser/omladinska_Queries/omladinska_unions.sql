@@ -57,7 +57,7 @@ use OMLADINSKA;
 
 /* INTERSECT */
 
-select ime, prezime 
+--select ime, prezime 
 --from izvrsilac 
 --where idIzvrsilac in (select idIzvrsilac
 --					  from ucesce
