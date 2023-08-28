@@ -44,3 +44,22 @@ use STUDENTSKA;
 --(SELECT smer FROM Deleted),(SELECT broj FROM Deleted), 
 --(SELECT godina_upisa FROM Deleted),getDate())
 
+/* SP 2 */
+
+--go
+--create procedure menjaOcenu (@idStud int, @idIsp int, @bodovi int, @ocena int) 
+--as begin 
+--UPDATE zapisnik 
+--SET ocena=@ocena, bodovi=@bodovi 
+--WHERE id_studenta=@idStud AND id_ispita=@idIsp; 
+--end
+
+/* SP 3 */
+
+--go
+--create procedure pon_ocena (@idIspit int, @idStudent int) 
+--as begin 
+--UPDATE Zapisnik 
+--SET ocena=2, bodovi=0 
+--WHERE id_Ispita=@idIspit AND id_Studenta=@idStudent 
+--end
