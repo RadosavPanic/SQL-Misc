@@ -33,3 +33,33 @@
 --select *
 --from dbo.fun_zaposleniUMesecu(4)
 
+/* FN 3 */
+
+--go
+--create function fn_isplacenaSredstva(@jmbg char(13))
+--returns float
+--as begin
+--declare @ukupno float
+--select @ukupno = sum(iznos) from isplata
+--							where idIzvrsilac = 
+--						    (select idIzvrsilac from izvrsilac where jmbg = @jmbg);
+											
+--return @ukupno;
+--end;
+--go
+
+--select ime, prezime, dbo.fn_isplacenaSredstva(jmbg) as 'Isplacena sredstva izvrsiocu' from izvrsilac;
+
+/* FN 4 */
+
+--go
+--create function fn_narucilacProjekta(@id int)
+--returns table
+--as return (
+--select * from projekat
+--where idNarucilac = @id);
+--go
+
+--select *
+--from dbo.fn_narucilacProjekta(1);
+
