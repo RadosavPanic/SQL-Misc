@@ -30,5 +30,8 @@ use STUDENTSKA;
 --where smer = @smer);
 --go
 
-select *
-from dbo.fn_studentiSmera('IS');
+--select *
+--from dbo.fn_studentiSmera('IS');
+
+
+
